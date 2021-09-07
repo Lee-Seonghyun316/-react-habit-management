@@ -1,6 +1,18 @@
 :root {
   --color-purple : mediumpurple;
   --color-pink : lightpink;
+  background: darkgray;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  width: 60%;
+  margin: auto;
+  padding: 20px 0;
 }
 
 ul {
