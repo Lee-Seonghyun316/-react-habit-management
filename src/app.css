@@ -1,0 +1,34 @@
+:root {
+  --color-purple : mediumpurple;
+  --color-pink : lightpink;
+}
+
+.habit-container {
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 0 ;
+  font-size: 2rem;
+}
+
+.habit-name {
+  color: var(--color-purple);
+  font-weight: bold;
+}
+
+.habit-count {
+  color: white;
+  font-weight: bold;
+}
+
+.habit-button {
+  background: transparent;
+  border: none;
+  color: var(--color-pink);
+  font-size: 2.5rem;
+}
+
+.habit-button:hover {
+  opacity: 0.8;
+}
