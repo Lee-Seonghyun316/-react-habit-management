@@ -3,6 +3,10 @@
   --color-pink : lightpink;
 }
 
+ul {
+  padding-left: 0;
+}
+
 .habit-container {
   background: black;
   display: flex;
@@ -15,6 +19,7 @@
 .habit-name {
   color: var(--color-purple);
   font-weight: bold;
+  width: 50%;
 }
 
 .habit-count {
