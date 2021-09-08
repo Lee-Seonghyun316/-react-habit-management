@@ -1,31 +1,29 @@
-import React, {PureComponent} from 'react';
+//rsi Tab : function component 만들기
+import React, {memo} from 'react';
+//momo : PureComponent와 같이 Props가 업데이트 되지 않으면 안에 있는 함수 호출하지 않음.
 
-class HabitAddForm extends PureComponent {
-    //Dom 요소 조작
-    formRef = React.createRef();
-    inputRef = React.createRef();
+const HabitAddForm = memo(props => {
+    const formRef = React.createRef();
+    const inputRef = React.createRef();
 
-    onSubmit = event => {
+    const onSubmit = event => {
         //submit 했을 때, 리프레쉬 일어나지 않도록 처리
         event.preventDefault();
         //input.value 받아오기
-        const name = this.inputRef.current.value;
-        name && this.props.onAdd(name);
-        this.formRef.current.reset();
+        const name = inputRef.current.value;
+        name && props.onAdd(name);
+        formRef.current.reset();
     };
 
-    render() {
-        return (
-            <form ref={this.formRef} className="habit-add-form" onSubmit={this.onSubmit}>
-                <input
-                    ref={this.inputRef}
-                    type="text"
-                    className="add-input"
-                    placeholder="Habit..."/>
-                <button className="add-button">Add</button>
-            </form>
-        );
-    }
-}
-
+    return (
+        <form ref={formRef} className="habit-add-form" onSubmit={onSubmit}>
+            <input
+                ref={inputRef}
+                type="text"
+                className="add-input"
+                placeholder="Habit..."/>
+            <button className="add-button">Add</button>
+        </form>
+    );
+});
 export default HabitAddForm;
