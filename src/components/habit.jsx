@@ -1,6 +1,16 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 //rcc + tab
-class Habit extends Component {
+class Habit extends PureComponent {
+    //lifecycle
+    //habit 만들고 console
+    componentDidMount() {
+        console.log(`habit : ${this.props.habit.name} mounted`)
+    }
+    //habit 지우기 전 console
+    componentWillUnmount() {
+        console.log(`habit : ${this.props.habit.name} will unmount`)
+    }
+
     handleIncrement = () => {
         this.props.onIncrement(this.props.habit);
     }
