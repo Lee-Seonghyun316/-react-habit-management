@@ -6,13 +6,50 @@
 
 .navbar-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   font-size: 2.5rem;
   font-weight: bold;
-  width: 60%;
   margin: auto;
   padding: 20px 0;
+}
+
+.habits-title {
+  margin: 0px 20px;
+}
+
+.habits-count {
+  background: black;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 50%;
+  font-size: 2rem;
+}
+
+.habit-add-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.add-input {
+  text-aligh: center;
+  font-size: 1.5rem;
+  background: transparent;
+  border: solid 2px rebeccapurple;
+}
+
+.add-button {
+  background: rebeccapurple;
+  border: solid 2px rebeccapurple;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+}
+
+.add-button:hover{
+  opacity: 0.8;
 }
 
 ul {
@@ -37,6 +74,7 @@ ul {
 .habit-count {
   color: white;
   font-weight: bold;
+  width: 10%;
 }
 
 .habit-button {
@@ -47,5 +85,23 @@ ul {
 }
 
 .habit-button:hover {
+  opacity: 0.8;
+}
+
+.reset-button-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.reset-button {
+  border: none;
+  background: rebeccapurple;
+  color: white;
+  font-size: 1.5rem;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.reset-button:hover {
   opacity: 0.8;
 }
